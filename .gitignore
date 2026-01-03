@@ -1,1 +1,9 @@
 node_modules
+.env
+*.db
+*.log
+.DS_Store
+.env
+*.db
+*.log
+.DS_Store
