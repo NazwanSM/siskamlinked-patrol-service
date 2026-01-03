@@ -4,20 +4,24 @@ Microservice untuk sistem manajemen patroli keamanan. Service ini menangani mana
 
 ## Daftar Isi
 
-- [Fitur](#-fitur)
-- [Tech Stack](#-tech-stack)
-- [Instalasi](#-instalasi)
-- [Konfigurasi](#-konfigurasi)
-- [Menjalankan Service](#-menjalankan-service)
-- [API Documentation](#-api-documentation)
-- [Testing](#-testing)
-- [Docker Deployment](#-docker-deployment)
+- [Fitur](#fitur)
+- [Tech Stack](#tech-stack)
+- [Instalasi](#instalasi)
+- [Konfigurasi](#konfigurasi)
+- [Menjalankan Service](#menjalankan-service)
+- [API Documentation](#api-documentation)
+- [Swagger UI](#swagger-ui)
+- [Testing](#testing)
+- [Docker Deployment](#docker-deployment)
 
 ## Fitur
 
 - **Authentication** - Register, Login dengan JWT Token
 - **Officer Management** - CRUD data petugas keamanan
 - **Attendance System** - Check-in/Check-out petugas
+- **Schedule Management** - Penjadwalan shift patroli
+- **Health Check** - Endpoint monitoring service
+- **Swagger UI** - Interactive API documentation
 - **Schedule Management** - Penjadwalan shift patroli
 - **Health Check** - Endpoint monitoring service
 
@@ -91,6 +95,44 @@ npm start
 ```
 
 Service akan berjalan di `http://localhost:3020`
+
+## Swagger UI
+
+Swagger UI tersedia untuk dokumentasi API interaktif.
+
+### Akses Swagger UI
+
+Setelah service berjalan, buka browser dan akses:
+
+```
+http://localhost:3020/api-docs
+```
+
+### Swagger JSON
+
+Untuk mendapatkan spesifikasi OpenAPI dalam format JSON:
+
+```
+http://localhost:3020/api-docs.json
+```
+
+### Fitur Swagger UI
+
+- **Try it out** - Test API langsung dari browser
+- **Authentication** - Masukkan JWT token untuk test endpoint yang memerlukan autentikasi
+- **Request/Response Examples** - Contoh request body dan response
+- **Schema Definitions** - Definisi struktur data
+
+### Cara Menggunakan
+
+1. Buka `/api-docs` di browser
+2. Untuk endpoint yang memerlukan autentikasi:
+   - Login terlebih dahulu via `/auth/login`
+   - Copy token dari response
+   - Klik tombol "Authorize" di bagian atas
+   - Masukkan token dengan format: `<token>` (tanpa kata "Bearer")
+   - Klik "Authorize"
+3. Sekarang bisa test semua endpoint yang memerlukan autentikasi
 
 ## API Documentation
 
