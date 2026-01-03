@@ -1,0 +1,11 @@
+services:
+  patrol-service:
+    build: .
+    container_name: patrol-service
+    env_file:
+      - .env
+    ports:
+      - "3020:3020"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
