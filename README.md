@@ -23,7 +23,6 @@ Microservice untuk sistem manajemen patroli keamanan. Service ini menangani mana
 - **Health Check** - Endpoint monitoring service
 - **Swagger UI** - Interactive API documentation
 - **Schedule Management** - Penjadwalan shift patroli
-- **Health Check** - Endpoint monitoring service
 
 ## Tech Stack
 
